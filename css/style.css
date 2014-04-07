@@ -1,0 +1,141 @@
+/*style reset*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	width: 100% !important;
+	overflow-x:hidden;
+	background: #ecf0f1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+em{
+	color: #c0392b;
+	text-transform: capitalize;
+	font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+	font-style:italic;
+	letter-spacing: -2px;
+}
+/*end style reset*/
+
+html, body, .content{
+	height: 100%;
+}
+
+.content{
+	display: table;
+	width: 100%;
+}
+.header{
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	text-align: center;
+	background: #ecf0f1;
+}
+.header h1{
+	font-size: 50px;
+	margin-top: 20px;
+	font-family: 'bebas_neueregular';
+	color: #252525;
+}
+.center{
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+.outputContain{
+	height: 600px;
+	width: 100%;
+	overflow: hidden;
+
+	background-image: url(../line.svg),url(../line.svg);
+	background-position: 10% center,90% center;
+	-webkit-background-size: 20% 3px;
+	-moz-background-size: 20% 3px;
+	background-size: 20% 3px;
+	
+
+	background-repeat: no-repeat;
+	
+}
+.output{
+	float: left;
+	width: 100%;
+
+	-webkit-animation: rollIn 5s ease-in-out; /* Chrome, Safari, Opera */
+	animation: rollIn 5s ease-in-out;
+}
+
+.output span{
+	float: left;
+	width: 100%;
+	line-height: 600px;
+	font-family: 'bebas_neueregular';
+	font-size: 200px;
+	color: #252525;
+}
+.output span:nth-child(1){
+	color: #c0392b;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rollIn
+{
+0% {margin-top: -6000px;}
+95% {margin-top: 20px;}
+100% {margin-top: 0;}
+}
+
+/* Standard syntax */
+@keyframes rollIn
+{
+0% {margin-top: -6000px;}
+95% {margin-top: 20px;}
+100% {margin-top: 0;}
+}
