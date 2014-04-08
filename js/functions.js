@@ -37,20 +37,14 @@ var randomGenerator = function(config){
 //Skriver ut sifran i webbläsaren. (ingen matte bara ux)
 randomGenerator.prototype.print = function () {
 	var self = this;
-	var HTMLvalue = "";
+	var HTMLvalue = "<div class='output'>";
 
 	for (i = 0; i < 10; i++) {
 		HTMLvalue += "<span>" + (self.vars.output-i) + "</span>";
 	};
 
+	HTMLvalue += "</div>";
+
 	$(self.output).html(HTMLvalue);
 	console.log(self.vars.output);
 }
-
-
-var test = new randomGenerator({
-	roof:34,
-	floor:0,
-	output:".output"
-});
-test.print();

@@ -15,17 +15,33 @@
 	</div>
 		<div class="center">
 			<div class="outputContain">
-				<div class="output"></div>
+					
 			</div>
 		</div>
 	</div>
-
+<div class="generate"> 
+	<h1 class="btn roll">Generate</h1>
+</div>
 
 	<!--Jquery och funktions filen -->
 	<script src="js/jquery.js"></script>
 	<script src="js/functions.js"></script>
 	<script>
-	
+		$(document).ready(function() {
+			var clickOrTouch = (('ontouchend' in window)) ? 'touchend' : 'click';
+			var generator = new randomGenerator({
+				roof:34,
+				floor:0,
+				output:".outputContain"
+			});
+			//generator.print();
+
+			$('.roll').on(clickOrTouch , function(event) {// increments todays items
+				generator.print();
+			});
+
+		});
+
 	</script>
 </body>
 </html>

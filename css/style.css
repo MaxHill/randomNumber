@@ -77,6 +77,7 @@ html, body, .content{
 	width: 100%;
 	text-align: center;
 	background: #ecf0f1;
+	color:#252525;
 }
 .header h1{
 	font-size: 50px;
@@ -84,7 +85,49 @@ html, body, .content{
 	font-family: 'bebas_neueregular';
 	color: #252525;
 }
+
+.generate{
+	position: absolute;
+	bottom: 0;
+	left:0;
+	width: 100%;
+	text-align: center;
+	height: 90px;
+	background: rgba(255,255,255,0.5);
+	background: #ecf0f1;
+}
+
+.btn{
+	margin: 0 auto;
+	width: 200px;
+	padding: 15px;
+	font-size: 35px;
+	font-family: 'bebas_neueregular';
+	border: 2px solid #252525;
+	color: #252525;
+	cursor: pointer;
+	-webkit-transition: all .2s ease-out;
+	-moz-transition: all .2s ease-out;
+	-ms-transition: all .2s ease-out;
+	-o-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.btn:hover{
+	border: 2px solid #c0392b;
+	color: #c0392b;
+}
+
+
 .center{
+	width: 100%;
 	display: table-cell;
 	text-align: center;
 	vertical-align: middle;
