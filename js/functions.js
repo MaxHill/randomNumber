@@ -17,10 +17,10 @@ var randomGenerator = function(config){
 	}
 
 	//funktioner
-	var funcs = {
+	self.funcs = {
 		//initierar alla funktioner
 		init:function(){
-			funcs.generate();
+			self.funcs.generate();
 			//initiate everything
 		},
 		//Genererar ett random tal
@@ -29,14 +29,15 @@ var randomGenerator = function(config){
 			//console.log((5*vars.X+1)%8);
 		},
 	}
-
-	funcs.init();
+	self.funcs.init();
 }
 
 
 //Skriver ut sifran i webbläsaren. (ingen matte bara ux)
 randomGenerator.prototype.print = function () {
 	var self = this;
+	console.log(self);
+	self.funcs.generate();
 	var HTMLvalue = "<div class='output'>";
 
 	for (i = 0; i < 10; i++) {
@@ -47,4 +48,17 @@ randomGenerator.prototype.print = function () {
 
 	$(self.output).html(HTMLvalue);
 	console.log(self.vars.output);
+}
+
+
+randomGenerator.prototype.uppgA = function () {
+	var seed = 0,
+	allVals = [];
+
+	for (var i = 0; i < 8; i++) {
+		allVals[i] = ((2*(seed)+1)%8);//.toString(2).slice(0, 2);
+		seed = allVals[i];
+	};
+
+	console.log(allVals);
 }

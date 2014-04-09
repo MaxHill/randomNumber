@@ -155,6 +155,10 @@ html, body, .content{
 	animation: rollIn 5s ease-in-out;
 }
 
+.outputRemove{
+	margin-top: 100%;
+}
+
 .output span{
 	float: left;
 	width: 100%;
