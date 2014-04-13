@@ -176,6 +176,37 @@ html, body, .content{
 	animation: rollOut .5s ease;
 }
 
+/* tablet (portrait and landscape) ----------- */
+@media only screen 
+and (max-width : 900px) {
+	.header h1{
+		font-size: 30px;
+		margin-top: 10px;
+		font-family: 'bebas_neueregular';
+		color: #252525;
+	}
+
+	.btn{
+		font-size: 20px;
+		padding: 10px;
+	}
+	.generate{
+		height: 60px;
+	}
+
+	.outputContain{
+		height: 300px;
+
+	}
+	.output span{
+		line-height: 300px;
+		font-size: 100px;
+	}
+}
+
+
+
+/*Animationer*/
 /* Chrome, Safari, Opera */
 @-webkit-keyframes rollIn
 {
