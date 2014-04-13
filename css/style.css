@@ -151,8 +151,8 @@ html, body, .content{
 	float: left;
 	width: 100%;
 
-	-webkit-animation: rollIn 4s ease-in-out; /* Chrome, Safari, Opera */
-	animation: rollIn 4s ease-in-out;
+	-webkit-animation: rollIn 3s ease-in-out; /* Chrome, Safari, Opera */
+	animation: rollIn 3s ease-in-out;
 }
 
 .outputRemove{
