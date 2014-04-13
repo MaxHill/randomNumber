@@ -46,8 +46,15 @@ randomGenerator.prototype.print = function () {
 
 	HTMLvalue += "</div>";
 
-	$(self.output).html(HTMLvalue);
-	console.log(self.vars.output);
+	if ($(".output").length > 0){
+		$(".output").addClass('rollOut');
+		setTimeout(function() {
+			$(self.output).html(HTMLvalue);
+		}, 490);
+		
+	}else{
+		$(self.output).html(HTMLvalue);
+	}
 }
 
 
@@ -60,5 +67,5 @@ randomGenerator.prototype.uppgA = function () {
 		seed = allVals[i];
 	};
 
-	console.log(allVals);
+	//console.log(allVals);
 }
