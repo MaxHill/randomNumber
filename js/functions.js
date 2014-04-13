@@ -8,10 +8,8 @@ var randomGenerator = function(config){
 	self.floor	= config.floor;
 	self.output	= config.output;
 
-	console.log(self.output);
-
 	self.vars = {
-		X: new Date().getTime(),
+		date: new Date().getTime(),
 		output:0
 
 	}
@@ -36,7 +34,6 @@ var randomGenerator = function(config){
 //Skriver ut sifran i webbläsaren. (ingen matte bara ux)
 randomGenerator.prototype.print = function () {
 	var self = this;
-	console.log(self);
 	self.funcs.generate();
 	var HTMLvalue = "<div class='output'>";
 
@@ -59,13 +56,37 @@ randomGenerator.prototype.print = function () {
 
 
 randomGenerator.prototype.uppgA = function () {
-	var seed = 0,
-	allVals = [];
+	var seedA = 0,
+	seedB = 0,
+	allValsUppgA = [],
+	allValsUppgB = [];
 
 	for (var i = 0; i < 8; i++) {
-		allVals[i] = ((2*(seed)+1)%8);//.toString(2).slice(0, 2);
-		seed = allVals[i];
+		allValsUppgA[i] = ((2*(seedA)+1)%8);
+		allValsUppgB[i] = ((2*(seedB)+1)%8).toString(2).slice(0, 2);
+		
+		seedA = allValsUppgA[i];
+		seedB = allValsUppgB[i];
 	};
 
-	//console.log(allVals);
+	console.log("Uppgift A: \n"+allValsUppgA);
+	console.log("Uppgift B: \n"+allValsUppgB);
+}
+
+randomGenerator.prototype.uppgC = function () {
+ var 	self = this,
+ 		repeats = [],
+ 		seeder = self.vars.date;
+
+
+ for (var i = 0; i <= 10000; i++) {
+ 	seeder = (seeder * 25713 + 13849) % (Math.pow(2,16));
+ 	var number = seeder >> 7;
+ 	
+ 	repeats[number]?
+ 		repeats[number] += 1:
+ 		repeats[number] = 1;
+ };
+ console.log("Uppgift C: ");
+ console.log(repeats);
 }
